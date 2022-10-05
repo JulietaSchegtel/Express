@@ -5,7 +5,6 @@ module.exports = {
 
         let product = products.find(product => product.id === +req.params.id)
 
-        return res.send(product)
     
         return res.render('detalleMenu', {
             product

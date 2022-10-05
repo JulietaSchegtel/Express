@@ -50,7 +50,7 @@
           <h1 class="ps-center">Nuentro Menu</h1>
           <% products.forEach(product => { %>
             <br />
-          <h4><%= product.title %> </h4>
+          <h4><a href="/products/detail/<%= product.id %> "><%= product.title %></a></h4>
           <p class="ps-text-grey">
             <%= product.description %> U$S <%= product.price.toFixed(2) %> 
           </p>
