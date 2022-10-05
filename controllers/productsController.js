@@ -1,5 +1,14 @@
+const products = require('../data/products');
+
 module.exports = {
     detail : (req, res) => {
-        return res.render('detalleMenu')
+
+        let product = products.find(product => product.id === +req.params.id)
+
+        return res.send(product)
+    
+        return res.render('detalleMenu', {
+            product
+        })
     }
 }
